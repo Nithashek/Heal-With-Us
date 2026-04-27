@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heal With Us — Safe Space to Share</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo" onclick="showPage('home')">Heal <span>with us</span></div>
+  <div class="nav-links">
+    <button class="nav-link active" onclick="showPage('home'); setActive(this)">Home</button>
+    <button class="nav-link" onclick="showPage('chat'); setActive(this)">Chat</button>
+    <button class="nav-link" onclick="showPage('call'); setActive(this)">Call</button>
+    <button class="nav-btn" onclick="openModal('auth')">Get Started</button>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════
+     HOME PAGE
+══════════════════════════════════════ -->
+<div class="page active" id="home">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <div class="hero-tag">A safe space since 2024</div>
+      <h1>Heal through<br><em>honest conversation</em></h1>
+      <p>Connect with a caring stranger. Share what's weighing on you — anonymously, privately, and without judgment. Your identity stays yours, always.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="openModal('auth')">Start Healing</button>
+        <button class="btn-outline" onclick="showPage('chat'); document.querySelectorAll('.nav-link')[1].classList.add('active'); document.querySelectorAll('.nav-link')[0].classList.remove('active')">Explore Chat</button>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="float-badge"><span class="badge-dot dot-green"></span>1,248 people online now</div>
+      <div class="float-badge"><span class="badge-dot dot-amber"></span>🔒 100% Anonymous</div>
+      <div class="float-badge"><span class="badge-dot dot-blue"></span>✓ Identity Verified</div>
+      <div class="blob-card">
+        <div class="blob-inner">
+          <span class="blob-icon">🌿</span>
+          <p>"You don't have to carry this alone."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div class="stats-strip">
+    <div class="stat"><span class="stat-num">98k+</span><span class="stat-label">Conversations</span></div>
+    <div class="stat"><span class="stat-num">42k+</span><span class="stat-label">Verified Users</span></div>
+    <div class="stat"><span class="stat-num">4.9★</span><span class="stat-label">Trust Score</span></div>
+    <div class="stat"><span class="stat-num">0</span><span class="stat-label">Data Sold</span></div>
+  </div>
+
+  <!-- Features -->
+  <div class="section">
+    <div class="section-tag">Why Heal With Us</div>
+    <div class="section-title">Everything you need to feel <em>heard & safe</em></div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feat-icon">🎭</div>
+        <h3>Unique Usernames</h3>
+        <p>Express yourself with a chosen pseudonym. Your real name, phone, or email is never revealed to anyone you talk with.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">✅</div>
+        <h3>Identity Verification</h3>
+        <p>OTP and document check keeps bots and fake accounts out — ensuring every person you meet is real, without exposing who they are.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">🔒</div>
+        <h3>End-to-End Encryption</h3>
+        <p>Every message and call is encrypted. Not even our servers can read your conversations.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">💬</div>
+        <h3>Anonymous Chat</h3>
+        <p>Text conversations matched by topic or mood. Reach out to a stranger and find unexpected comfort.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">📞</div>
+        <h3>In-App Voice Calls</h3>
+        <p>Talk it out with voice — voice-masked for extra privacy. No phone numbers exchanged, ever.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">🛡️</div>
+        <h3>Safe Reporting</h3>
+        <p>One-tap report and block. Trained moderators review flagged sessions within minutes to keep our community safe.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- How it works -->
+  <div class="how-section">
+    <div class="how-inner">
+      <div class="section-tag">Getting started</div>
+      <div class="section-title">Four steps to <em>feeling lighter</em></div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h4>Sign Up</h4>
+          <p>Create your account with a unique username. Your real identity is verified once but never shared.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h4>Verify Identity</h4>
+          <p>Quick OTP + ID check to confirm you're a real person. Takes under 2 minutes.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h4>Get Matched</h4>
+          <p>Our system finds a compatible stranger based on your mood and topic preferences.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h4>Talk Freely</h4>
+          <p>Chat or call in a completely safe, anonymous environment. End the session anytime.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <h2>Ready to <em>lighten the load?</em></h2>
+    <p>Join thousands who've found comfort in a stranger's words. You deserve to be heard.</p>
+    <button class="btn-accent" onclick="openModal('auth')">Begin Your First Conversation</button>
+  </div>
+
+  <footer>
+    © 2024 <span>Heal With Us</span> — All conversations are anonymous & encrypted. Your wellbeing matters.
+  </footer>
+</div>
+
+<!-- ══════════════════════════════════════
+     CHAT PAGE
+══════════════════════════════════════ -->
+<div class="page" id="chat">
+  <div class="chat-layout">
+
+    <!-- Sidebar -->
+    <div class="chat-sidebar">
+      <div class="sidebar-header">
+        <h3>Conversations</h3>
+        <input class="search-input" placeholder="🔍  Search chats…">
+      </div>
+      <div class="chat-list">
+        <div class="chat-item active">
+          <div class="avatar av-sage online-ring">S</div>
+          <div class="chat-item-info">
+            <div class="chat-item-name">Sunbeam42 <span class="chat-time">2m</span></div>
+            <div class="chat-preview">I understand what you mean…</div>
+            <span class="anon-chip">✓ verified</span>
+          </div>
+        </div>
+        <div class="chat-item">
+          <div class="avatar av-accent">W</div>
+          <div class="chat-item-info">
+            <div class="chat-item-name">WillowMoon <span class="chat-time">1h</span></div>
+            <div class="chat-preview">Thank you for listening 🌱</div>
+            <span class="anon-chip">✓ verified</span>
+          </div>
+          <div class="unread-dot"></div>
+        </div>
+        <div class="chat-item">
+          <div class="avatar av-blue">R</div>
+          <div class="chat-item-info">
+            <div class="chat-item-name">RiverStone <span class="chat-time">3h</span></div>
+            <div class="chat-preview">You're not alone in this</div>
+            <span class="anon-chip">✓ verified</span>
+          </div>
+        </div>
+        <div class="chat-item">
+          <div class="avatar av-purple">D</div>
+          <div class="chat-item-info">
+            <div class="chat-item-name">DuskPetal <span class="chat-time">Yesterday</span></div>
+            <div class="chat-preview">Good luck with everything 💙</div>
+            <span class="anon-chip">✓ verified</span>
+          </div>
+        </div>
+      </div>
+      <button class="new-chat-btn" onclick="openModal('match')">＋ New Conversation</button>
+    </div>
+
+    <!-- Chat Main -->
+    <div class="chat-main">
+      <div class="chat-topbar">
+        <div class="chat-topbar-info">
+          <div class="avatar av-sage online-ring" style="width:36px;height:36px;font-size:0.9rem;">S</div>
+          <div>
+            <div class="topbar-name">Sunbeam42</div>
+            <div class="topbar-status">🟢 Online • ✓ Verified</div>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <button class="icon-btn" onclick="showPage('call')" title="Voice Call">📞</button>
+          <button class="icon-btn" title="Mute Notifications">🔔</button>
+          <button class="icon-btn" title="Session Info">ℹ️</button>
+          <button class="icon-btn red" title="Report / Block">🚩</button>
+        </div>
+      </div>
+
+      <div class="messages" id="messages">
+        <div class="day-label">Today</div>
+        <div class="msg recv">
+          <div class="msg-avatar av-sage" style="background:var(--deep-sage);">S</div>
+          <div class="msg-content">
+            <div class="bubble">Hey, I'm here. No pressure — just share whenever you're ready 🌿</div>
+            <div class="msg-time">10:02 AM</div>
+          </div>
+        </div>
+        <div class="msg sent">
+          <div class="msg-avatar" style="background:var(--accent);">Me</div>
+          <div class="msg-content">
+            <div class="bubble">I've been feeling really overwhelmed lately. Work, family, everything at once.</div>
+            <div class="msg-time">10:04 AM</div>
+          </div>
+        </div>
+        <div class="msg recv">
+          <div class="msg-avatar av-sage" style="background:var(--deep-sage);">S</div>
+          <div class="msg-content">
+            <div class="bubble">That sounds really heavy. You're carrying a lot. What's been weighing on you most?</div>
+            <div class="msg-time">10:05 AM</div>
+          </div>
+        </div>
+        <div class="msg sent">
+          <div class="msg-avatar" style="background:var(--accent);">Me</div>
+          <div class="msg-content">
+            <div class="bubble">Mostly the feeling that no one really gets it. That's why I came here.</div>
+            <div class="msg-time">10:07 AM</div>
+          </div>
+        </div>
+        <div class="msg recv">
+          <div class="msg-avatar av-sage" style="background:var(--deep-sage);">S</div>
+          <div class="msg-content">
+            <div class="bubble">I hear you. And for what it's worth — I get it more than you might think 💙</div>
+            <div class="msg-time">10:08 AM</div>
+          </div>
+        </div>
+        <div class="msg recv" id="typing-msg" style="display:none;">
+          <div class="msg-avatar" style="background:var(--deep-sage);">S</div>
+          <div class="msg-content">
+            <div class="typing-indicator">
+              <div class="typing-dot"></div>
+              <div class="typing-dot"></div>
+              <div class="typing-dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-input-bar">
+        <button class="emoji-btn">😊</button>
+        <button class="attach-btn">📎</button>
+        <input class="chat-input" id="chatInput" placeholder="Type something… this is a safe space" onkeypress="handleChatKey(event)">
+        <button class="send-btn" onclick="sendMessage()">➤</button>
+      </div>
+    </div>
+
+    <!-- Info panel -->
+    <div class="chat-info-panel">
+      <div class="info-card">
+        <h4>Talking With</h4>
+        <div class="info-avatar av-sage" style="background:var(--deep-sage); width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:600;color:white;margin:0 auto 0.5rem;">S</div>
+        <p style="text-align:center;font-size:0.88rem;font-weight:500;margin-bottom:0.3rem;">Sunbeam42</p>
+        <p style="text-align:center;"><span class="verified-tag">✓ Verified User</span></p>
+        <p style="text-align:center;font-size:0.75rem;color:var(--ash);margin-top:0.4rem;">Real identity verified.<br>Profile is anonymous.</p>
+      </div>
+
+      <div class="info-card">
+        <h4>Chat Settings</h4>
+        <div class="toggle-row">
+          <span class="toggle-label">🔒 End-to-end encrypt</span>
+          <button class="toggle on" onclick="this.classList.toggle('on');this.classList.toggle('off')"></button>
+        </div>
+        <div class="toggle-row">
+          <span class="toggle-label">🎭 Anonymous Mode</span>
+          <button class="toggle on" onclick="this.classList.toggle('on');this.classList.toggle('off')"></button>
+        </div>
+        <div class="toggle-row">
+          <span class="toggle-label">🔔 Notifications</span>
+          <button class="toggle on" onclick="this.classList.toggle('on');this.classList.toggle('off')"></button>
+        </div>
+        <div class="toggle-row">
+          <span class="toggle-label">💾 Save Chat Log</span>
+          <button class="toggle off" onclick="this.classList.toggle('on');this.classList.toggle('off')"></button>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h4>Safety</h4>
+        <button class="report-btn">🚩 Report this user</button>
+        <button class="report-btn" style="margin-top:0.5rem; border-color:var(--ash); color:var(--ash);">🚫 Block & End Chat</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     CALL PAGE
+══════════════════════════════════════ -->
+<div class="page" id="call">
+  <div class="call-layout">
+    <div>
+      <p class="section-tag" style="margin-bottom:0.4rem;">Voice Connection</p>
+      <div class="call-page-title">Talk it out — <em>voice to voice</em></div>
+    </div>
+
+    <div class="call-options">
+      <div class="call-option-card selected" onclick="selectCallType(this)">
+        <span class="call-option-icon">🎭</span>
+        <h3>Anonymous Voice</h3>
+        <p>Your voice is masked. Only your words reach the other person — completely private.</p>
+      </div>
+      <div class="call-option-card" onclick="selectCallType(this)">
+        <span class="call-option-icon">🎙️</span>
+        <h3>Natural Voice</h3>
+        <p>Speak in your real voice for a more human, warm connection. Still anonymous by username.</p>
+      </div>
+    </div>
+
+    <!-- Active Call -->
+    <div class="call-active" id="callCard">
+      <div class="call-rings" id="callVisual">
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="caller-avatar">🌿</div>
+      </div>
+      <div class="call-name">Sunbeam42</div>
+      <div class="call-status" id="callStatus">Finding someone for you…</div>
+      <div class="call-timer" id="callTimer" style="display:none;">00:00</div>
+      <div class="call-controls">
+        <button class="call-btn mute" id="muteBtn" onclick="toggleMute()" title="Mute">🎤</button>
+        <button class="call-btn end" onclick="endCall()" title="End Call">📵</button>
+        <button class="call-btn speaker" id="speakerBtn" onclick="toggleSpeaker()" title="Speaker">🔊</button>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
+      <!-- Call Settings -->
+      <div class="call-settings-panel">
+        <h3>Call Settings</h3>
+        <div class="setting-row">
+          <span class="setting-label"><span class="setting-icon">🎭</span> Voice Masking</span>
+          <button class="toggle on" onclick="this.classList.toggle('on');this.classList.toggle('off')"></button>
+        </div>
+        <div class="setting-row">
+          <span class="setting-label"><span class="setting-icon">🔇</span> Noise Suppression</span>
+          <button class="toggle on" onclick="this.classList.toggle('on');this.classList.toggle('off')"></button>
+        </div>
+        <div class="setting-row">
+          <span class="setting-label"><span class="setting-icon">📊</span> Call Recording</span>
+          <button class="toggle off" onclick="this.classList.toggle('on');this.classList.toggle('off')"></button>
+        </div>
+        <div class="setting-row">
+          <span class="setting-label"><span class="setting-icon">🌐</span> Auto-Translate</span>
+          <button class="toggle off" onclick="this.classList.toggle('on');this.classList.toggle('off')"></button>
+        </div>
+        <div class="setting-row">
+          <span class="setting-label"><span class="setting-icon">🔒</span> Encryption</span>
+          <button class="toggle on" onclick="this.classList.toggle('on');this.classList.toggle('off')"></button>
+        </div>
+      </div>
+
+      <!-- Queue -->
+      <div class="call-queue">
+        <h3>Available Listeners</h3>
+        <div class="queue-item">
+          <div class="avatar av-sage" style="width:36px;height:36px;font-size:0.85rem;">M</div>
+          <div class="queue-info">
+            <div class="queue-name">MorningDew</div>
+            <div class="queue-wait">Waiting 2 min</div>
+          </div>
+          <span class="queue-badge">✓</span>
+          <button class="connect-btn" onclick="startCall('MorningDew')">Connect</button>
+        </div>
+        <div class="queue-item">
+          <div class="avatar av-blue" style="width:36px;height:36px;font-size:0.85rem;">O</div>
+          <div class="queue-info">
+            <div class="queue-name">OakGrove</div>
+            <div class="queue-wait">Waiting 5 min</div>
+          </div>
+          <span class="queue-badge">✓</span>
+          <button class="connect-btn" onclick="startCall('OakGrove')">Connect</button>
+        </div>
+        <div class="queue-item">
+          <div class="avatar av-purple" style="width:36px;height:36px;font-size:0.85rem;">C</div>
+          <div class="queue-info">
+            <div class="queue-name">CalmHarbor</div>
+            <div class="queue-wait">Waiting 8 min</div>
+          </div>
+          <span class="queue-badge">✓</span>
+          <button class="connect-btn" onclick="startCall('CalmHarbor')">Connect</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     AUTH MODAL
+══════════════════════════════════════ -->
+<div class="overlay" id="authModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('authModal')">✕</button>
+    <div id="authStep1">
+      <h2>Welcome back 🌿</h2>
+      <p class="sub">Create a safe, anonymous account to start healing through conversation.</p>
+      <div class="tabs">
+        <button class="tab active" onclick="switchTab(this,'signup')">Sign Up</button>
+        <button class="tab" onclick="switchTab(this,'login')">Log In</button>
+      </div>
+      <div id="signup-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="Your name" id="firstName">
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Last name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Choose Username</label>
+          <input type="text" placeholder="e.g. WillowMoon42" id="usernameInput" oninput="checkUsername(this)">
+          <div class="field-hint" id="usernameHint">Pick a unique pseudonym — this is how others know you.</div>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+          <label>Phone (for OTP verification)</label>
+          <input type="tel" placeholder="+91 98765 43210" id="phoneInput">
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" placeholder="Strong password">
+        </div>
+        <button class="btn-primary" style="width:100%;margin-top:0.5rem;" onclick="goToVerify()">Continue to Verification →</button>
+      </div>
+      <div id="login-form" style="display:none;">
+        <div class="form-group">
+          <label>Username or Email</label>
+          <input type="text" placeholder="WillowMoon42 or email">
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" placeholder="Your password">
+        </div>
+        <button class="btn-primary" style="width:100%;margin-top:0.5rem;" onclick="loginSuccess()">Log In</button>
+      </div>
+      <div class="privacy-note">By continuing, you agree to our <a href="#">Privacy Policy</a> & <a href="#">Terms</a>. Your real identity is never shown to other users.</div>
+    </div>
+
+    <!-- OTP Step -->
+    <div id="authStep2" style="display:none;">
+      <h2>Verify it's you ✅</h2>
+      <p class="sub">We sent a 6-digit code to your phone. Enter it below to confirm you're a real person — not a bot.</p>
+      <div class="verify-badge">
+        <span class="vi">📱</span>
+        <p><strong>OTP sent to +91 98765 XXXXX</strong>Your real number is never shared with other users.</p>
+      </div>
+      <div class="form-group">
+        <label>Enter OTP</label>
+        <div class="otp-row">
+          <input type="text" maxlength="1" oninput="otpNext(this,0)">
+          <input type="text" maxlength="1" oninput="otpNext(this,1)">
+          <input type="text" maxlength="1" oninput="otpNext(this,2)">
+          <input type="text" maxlength="1" oninput="otpNext(this,3)">
+          <input type="text" maxlength="1" oninput="otpNext(this,4)">
+          <input type="text" maxlength="1" oninput="otpNext(this,5)">
+        </div>
+      </div>
+      <div class="verify-badge" style="margin-top:0.8rem;">
+        <span class="vi">🪪</span>
+        <p><strong>Optional: Faster Verification</strong>Upload a govt. ID for instant badge. Stored encrypted, never shared.</p>
+      </div>
+      <button class="btn-primary" style="width:100%;" onclick="verifySuccess()">Verify & Complete →</button>
+      <div class="privacy-note" style="margin-top:0.8rem;">Didn't get the code? <a href="#" style="cursor:pointer;">Resend OTP</a></div>
+    </div>
+
+    <!-- Success -->
+    <div id="authStep3" style="display:none;">
+      <div class="success-msg">
+        <span class="tick">🎉</span>
+        <h3>You're all set!</h3>
+        <p>Welcome, <strong id="welcomeUser">WillowMoon</strong>. Your anonymous identity is ready. Start your first conversation below.</p>
+        <div style="display:flex;gap:0.8rem;margin-top:1.5rem;justify-content:center;">
+          <button class="btn-primary" onclick="closeModal('authModal');showPage('chat')">Start Chatting</button>
+          <button class="btn-outline" onclick="closeModal('authModal');showPage('call')">Try a Call</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-stripe"></div>
+  </div>
+</div>
+
+<!-- Match Modal -->
+<div class="overlay" id="matchModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('matchModal')">✕</button>
+    <h2>Find a listener 🌱</h2>
+    <p class="sub">Tell us a bit about what you'd like to talk about — we'll find the right match for you.</p>
+    <div class="form-group">
+      <label>What's on your mind?</label>
+      <select>
+        <option>Stress & Anxiety</option>
+        <option>Relationships</option>
+        <option>Work & Career</option>
+        <option>Grief & Loss</option>
+        <option>Family Issues</option>
+        <option>Self-esteem</option>
+        <option>Just need to vent</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Preferred Mode</label>
+      <select>
+        <option>Text Chat</option>
+        <option>Voice Call</option>
+        <option>Either is fine</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Language</label>
+      <select>
+        <option>English</option>
+        <option>Hindi</option>
+        <option>Malayalam</option>
+        <option>Tamil</option>
+        <option>Telugu</option>
+      </select>
+    </div>
+    <button class="btn-primary" style="width:100%;" onclick="closeModal('matchModal')">🔍 Find My Match</button>
+    <div class="modal-stripe"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
